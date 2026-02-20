@@ -1,0 +1,166 @@
+.admin-dashboard {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #eaf1ff, #f6f9ff);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.dashboard-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 40px;
+}
+
+/* ================= STATS ================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.stat-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  h4 {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2563eb;
+  }
+}
+
+/* ================= CARD ================= */
+
+.dashboard-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  margin-bottom: 35px;
+}
+
+.dashboard-card h3 {
+  font-size: 20px;
+  color: #2563eb;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 8px;
+}
+
+/* ================= ADD STUDENT FORM ================= */
+
+.add-student-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+
+  input {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    transition: 0.2s;
+
+    &:focus {
+      border-color: #4f8ef7;
+      box-shadow: 0 0 0 2px rgba(79, 142, 247, 0.15);
+      outline: none;
+    }
+  }
+
+  button {
+    background: #4f8ef7;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background: #3b78e0;
+    }
+  }
+}
+
+/* ================= LISTS ================= */
+
+.student-list,
+.booking-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    background: #f3f6ff;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.2s;
+
+    &:hover {
+      background: #e7efff;
+    }
+  }
+}
+
+/* ================= BUTTONS ================= */
+
+.danger-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: #dc2626;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 26px;
+  }
+
+  .stat-box p {
+    font-size: 22px;
+  }
+
+  .dashboard-card {
+    padding: 20px;
+  }
+}

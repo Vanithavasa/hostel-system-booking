@@ -1,0 +1,216 @@
+/* ================= GLOBAL RESET (Prevents White Border) ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* ================= MAIN PAGE ================= */
+
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+/* ================= BACKGROUND SLIDER ================= */
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  animation: backgroundSlide 12s infinite ease-in-out;
+  z-index: -2;
+}
+
+/* Dark overlay */
+.login-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+/* Background animation */
+@keyframes backgroundSlide {
+  0% {
+    background-image: url("../assets/login1.jpg");
+  }
+  45% {
+    background-image: url("../assets/login1.jpg");
+  }
+  50% {
+    background-image: url("../assets/login2.jpg");
+  }
+  95% {
+    background-image: url("../assets/login2.jpg");
+  }
+  100% {
+    background-image: url("../assets/login1.jpg");
+  }
+}
+
+/* ================= WRAPPER ================= */
+
+.login-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  padding: 40px;
+  align-items: center;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.login-info {
+  color: white;
+
+  h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 450px;
+    opacity: 0.9;
+  }
+}
+
+/* ================= LOGIN CARD ================= */
+
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 45px 40px;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  transition: 0.3s ease;
+
+  h2 {
+    font-size: 26px;
+    margin-bottom: 28px;
+    text-align: center;
+    color: #222;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  input {
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+
+    &:focus {
+      border-color: #4f8ef7;
+      box-shadow: 0 0 0 3px rgba(79, 142, 247, 0.15);
+    }
+  }
+
+  form button {
+    margin-top: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #4f8ef7;
+    color: white;
+    transition: 0.3s;
+    width: 100%;
+  }
+
+  form button:hover {
+    background: #3b78e0;
+  }
+}
+
+/* ================= ERROR ================= */
+
+.error {
+  margin-top: 14px;
+  color: #dc2626;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ================= DIVIDER ================= */
+
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 30px 0;
+}
+
+/* ================= ADMIN + REGISTER BUTTONS ================= */
+
+.register-redirect {
+  text-align: center;
+
+  p {
+    margin-bottom: 16px;
+    color: #666;
+    font-size: 14px;
+  }
+
+  .admin-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .admin-buttons button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #4f8ef7;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .admin-buttons button:hover {
+    background: #3b78e0;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .login-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .login-info {
+    text-align: center;
+  }
+}

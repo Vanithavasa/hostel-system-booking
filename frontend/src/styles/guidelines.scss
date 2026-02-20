@@ -1,0 +1,125 @@
+/* ================= PAGE WRAPPER ================= */
+
+.guidelines-container {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+
+  background: url("../assets/guidelines-bg.jpg") no-repeat center center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 100px 20px 60px;
+  position: relative;
+}
+
+/* ===== Dark overlay for readability ===== */
+
+.guidelines-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.guidelines-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= LOGOUT BUTTON ================= */
+
+.guidelines-container > button {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+
+  background: #ef4444;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.guidelines-container > button:hover {
+  background: #dc2626;
+}
+
+/* ================= TITLE ================= */
+
+.guidelines-container h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 50px;
+  letter-spacing: 0.5px;
+}
+
+/* ================= GUIDELINES CARD ================= */
+
+.guidelines-container ul {
+  width: 100%;
+  max-width: 850px;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+
+  padding: 45px 50px;
+  border-radius: 24px;
+
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
+
+  list-style: none;
+}
+
+/* ================= GUIDELINE ITEM ================= */
+
+.guidelines-container li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 22px;
+
+  font-size: 17px;
+  color: #374151;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.guidelines-container li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 26px;
+  color: #4f8ef7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .guidelines-container {
+    padding: 80px 20px 40px;
+  }
+
+  .guidelines-container h2 {
+    font-size: 24px;
+  }
+
+  .guidelines-container ul {
+    padding: 30px 25px;
+  }
+
+  .guidelines-container li {
+    font-size: 15px;
+  }
+}

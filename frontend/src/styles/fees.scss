@@ -1,0 +1,136 @@
+/* ================= PAGE WRAPPER ================= */
+
+.fees-page {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+
+  background: url("../assets/fees-bg.jpg") no-repeat center center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 100px 20px 60px;
+  position: relative;
+}
+
+/* ===== Dark Overlay for readability ===== */
+
+.fees-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.fees-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= TITLE ================= */
+
+.fees-page h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f5ebeb;
+  margin-bottom: 50px;
+  letter-spacing: 0.5px;
+}
+
+/* ================= FEE CARD ================= */
+
+.fee-card {
+  width: 100%;
+  max-width: 850px;
+
+  background: rgba(247, 238, 238, 0.92);
+  backdrop-filter: blur(10px);
+
+  padding: 45px 50px;
+  border-radius: 24px;
+
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
+
+  margin-bottom: 35px;
+  transition: 0.3s ease;
+}
+
+.fee-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.35);
+}
+
+/* ================= HOSTEL TITLE ================= */
+
+.fee-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ================= FEE GRID ================= */
+
+.fee-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+  margin-bottom: 35px;
+}
+
+.fee-grid div {
+  background: #d3dcef;
+  padding: 18px 20px;
+  border-radius: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 15px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* ================= TOTAL ================= */
+
+.total {
+  background: linear-gradient(135deg, #4f8ef7, #2563eb);
+  color: white;
+
+  padding: 20px;
+  border-radius: 16px;
+
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.35);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .fee-card {
+    padding: 30px 25px;
+  }
+
+  .fee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fees-page h2 {
+    font-size: 24px;
+  }
+
+  .total {
+    font-size: 18px;
+  }
+}

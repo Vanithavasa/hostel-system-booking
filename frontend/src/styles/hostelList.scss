@@ -1,0 +1,100 @@
+/* ================= PAGE WRAPPER ================= */
+
+.hostel-page {
+  min-height: 100vh;
+  width: 100%;
+  background: url("../assets/hostel-bg.jpg") no-repeat center center;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+/* Dark overlay for readability */
+.hostel-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.hostel-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= TITLE ================= */
+
+.hostel-page h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* ================= HOSTEL LIST ================= */
+
+.hostel-list {
+  width: 100%;
+  max-width: 650px;   /* slightly wider */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ================= HOSTEL CARD ================= */
+
+.hostel-card {
+  background: #d3d7df;   /* soft light */
+  padding: 25px 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hostel-card h3 {
+  font-size: 20px;
+  color: #1f2937;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Hover Effect */
+.hostel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .hostel-page {
+    padding: 60px 20px;
+  }
+
+  .hostel-page h2 {
+    font-size: 24px;
+  }
+
+  .hostel-list {
+    max-width: 100%;
+  }
+
+  .hostel-card {
+    padding: 20px;
+  }
+}

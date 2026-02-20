@@ -1,0 +1,107 @@
+/* ================= PAGE BACKGROUND ================= */
+
+.signup-page {
+  min-height: 100vh;
+  background: url("../assets/signup-bg.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* Dark overlay */
+.signup-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.signup-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= SIGNUP CARD ================= */
+
+.signup-container {
+  max-width: 650px;
+  width: 100%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  font-family: "Segoe UI", sans-serif;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+  }
+
+  textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+
+  .image-block {
+    margin: 15px 0;
+    padding: 12px;
+    border: 1px dashed #ccc;
+    border-radius: 10px;
+    background: #fafafa;
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+  }
+
+  /* ================= IMPROVED BUTTONS ================= */
+
+  button {
+    padding: 11px 20px;
+    border-radius: 60px;
+    border: none;
+    background: #4f8ef7;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.25s ease;
+  }
+
+  button:hover {
+    background: #3b78e0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(79, 142, 247, 0.35);
+  }
+
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .error {
+    color: crimson;
+    font-size: 0.9rem;
+  }
+
+  .success {
+    color: green;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,110 @@
+/* PAGE */
+.page-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eaf1ff, #f6f9ff);
+  font-family: "Segoe UI", sans-serif;
+  padding: 30px 20px;
+  position: relative;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  &:hover {
+    background: #dc2626;
+  }
+}
+
+/* FORM CARD */
+.booking-form {
+  max-width: 520px;
+  margin: 80px auto 0;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* TITLE */
+.booking-form h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 24px;
+}
+
+/* SUMMARY BOX */
+.summary {
+  background: #f8fbff;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+  border-left: 5px solid #4f8ef7;
+
+  p {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #374151;
+
+    strong {
+      color: #1f2937;
+    }
+  }
+}
+
+/* ERROR MESSAGE */
+.error {
+  color: #dc2626;
+  font-size: 14px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+/* CONFIRM BUTTON */
+.confirm-btn {
+  width: 100%;
+  padding: 14px;
+  background: #22c55e;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  &:hover {
+    background: #16a34a;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .booking-form {
+    padding: 24px;
+    margin-top: 60px;
+  }
+
+  .booking-form h2 {
+    font-size: 20px;
+  }
+}
