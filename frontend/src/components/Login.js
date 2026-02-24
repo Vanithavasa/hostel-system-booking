@@ -19,7 +19,7 @@ export default function Login({ setUser }) {
     }
 
     try {
-      const res = await fetch("http://hostel-system-booking.onrender.com/api/login", {
+      const res = await fetch("https://hostel-system-booking.onrender.com/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ college, rank, password })
